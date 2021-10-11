@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joes Hotdog Shop</title>
+    <style type="text/css">
+        head,body {font-size: 30pt;}
+        h1 {
+            color:rgb(138, 43, 226);
+        }
+        img {
+            width: 100%;
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1> Joe's Hotdog Shop Calculations </h1>
+    <img src="https://media-cldnry.s-nbcnews.com/image/upload/newscms/2020_27/1586837/hotdogs-te-main-200702.jpg" align='right'>
+    <script language = "javascript">
+        var h_food = prompt("Enter the quantity of hotdogs you would like: ", "0");
+        var f_food = prompt("Enter the quantity of fries you would like: ", "0");
+        var s_food = prompt("Enter the quantity of sodas you would like: ", "0");
+        
+        document.write("Hotdogs: " + h_food + "<br \>");
+        document.write("Fries: " + f_food + "<br \>");
+        document.write("Sodas: " + s_food + "<br \>");
+        document.write("<br \>");
+
+        var hPrice = h_food * 3.75;
+        var fryPrice = f_food * 2.00;
+        var sodaPrice =  s_food * 1.50;
+        
+        var subTotal = fryPrice + sodaPrice + hPrice;
+
+        document.write("The subtotal before tax and discount is : $" + subTotal + "<br \>");
+
+        document.write("The total after discount is $" );
+        document.write(subTotal >= 20? (subTotal * .9).toFixed(2) + "<br \> " : subTotal + "<br \>");
+
+        var totalPrice = subTotal * 1.0625;
+
+        document.write("The total is : $" + totalPrice.toFixed(2) + "<br \>");
+    </script>
+</body>
+</html>
